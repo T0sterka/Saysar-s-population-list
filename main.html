@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./nain.css">
+    <title>Saysar's population list</title>
+</head>
+<body>
+    <body style="background-color: #303030"></body>
+    <header class="header">
+        <div class="txt">
+            <h1 class="text">
+                Важно отметить, что данные могут быть неточным при наличии гостей, временного отсутствия жильцов или использования ресурсов не только для бытовых целей. Кроме того, необходимо учитывать стоимость и возможности установки индивидуальных приборов учета.
+
+            </h1>
+        </div>
+
+        <iframe class="googlemap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59885.464842952446!2d129.593366047595!3d62.02740938562093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5bf64a084019929d%3A0xb1a1b243a16aa9cc!2z0KHQsNC50YHQsNGA0YHQutC40Lkg0YAt0L0sINCv0LrRg9GC0YHQuiwg0KDQtdGB0L8uINCh0LDRhdCwICjQr9C60YPRgtC40Y8p!5e0!3m2!1sru!2sru!4v1680918360547!5m2!1sru!2sru" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+        <div class="map"></div>
+    <H1 class="text">Введите данные для расчёта примерного количества реальных жителей</H1>
+    </header>
+    <p class="txt">Введите потребление горячей воды (в кубах)</p>>>
+    <input type="text" class="i-1">
+
+    <p class="txt">Введите потребление холодной воды (в кубах)</p>>>
+    <input type="text" class="i-2">
+
+    <p class="txt">Введите количество официально прописанных людей потребление енергии (кВТ)</p>>>
+    <input type="text" class="i-3">
+
+    <p class="txt">Введите количество официально прописанных людей</p>>>
+    <input type="text" class="i-4">
+
+    <a href="#" class="button btn">Говото</a>
+<script>    
+    let btn = document.querySelector(".button");
+
+    let sde = 36;
+    let sdvg = 1;
+    let sdvh = 1.5;
+    btn.onclick = function(){
+        let pvg = document.querySelector(".i-1").value;
+        let pvh = document.querySelector(".i-2").value;
+        let op = document.querySelector(".i-3").value;
+        let pe = document.querySelector(".i-4").value;
+        pvgRound = Math.round(pvg);
+        let b = pvh/1.5;
+        let c = pe / sde;
+        let d = pvgRound + b + c;
+        let np = d/3
+        let np1 = Math.round(np);
+        alert("Примерное количество реально проживающих = " + np1)
+
+    }
+</script>
+</body>
+</html>
